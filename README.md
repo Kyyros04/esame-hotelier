@@ -57,12 +57,14 @@ javac -cp .:gson-2.8.2.jar ClientMain.java
 ```
 
 ### Running the Applications
-Both applications feature **optional configuration arguments**. If arguments are omitted, the software gracefully loads predefined fallback parameters.
+Both applications feature **optional configuration arguments**. If arguments are omitted, the software gracefully loads predefined fallback parameters. 
+
+NB!!: args6 is been removed. [ INTERVALLO_SLEEPS ]
 
 ```bash
 # Run Server
-# Arguments: [PORT, PORT_UDP, IP_GROUP, PORT_GROUP, INTERVALLO_RANK_STORE, INTERVALLO_SLEEP_SELECT]
-java -cp .:gson-2.8.2.jar ServerMain [argS1 argS2 argS3 argS4 argS5 argS6]
+# Arguments: [PORT, PORT_UDP, IP_GROUP, PORT_GROUP, INTERVALLO_RANK_STORE]
+java -cp .:gson-2.8.2.jar ServerMain [argS1 argS2 argS3 argS4 argS5]
 
 # Run Client
 # Arguments: [IP, PORT, PORT_UDP, IP_GROUP]
