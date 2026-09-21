@@ -26,11 +26,10 @@ public class ServerMain {
 	static String IP_GROUP= "230.0.0.0";
 	static int PORT_GROUP = 6000;
 	static int INTERVALLO_RANK_STORE=8;
-	static int INTERVALLO_SLEEP_SELECT=1000; //da rimuovere
 	//args : numeri di porta, indirizzi, intervallo per aggiornamento dei ranking, ecc..
 	public static void main(String[] args){
 		try(ServerSocketChannel server = ServerSocketChannel.open()){
-			if(args.length !=0 && args.length!=4)throw new Exception("non mettere parametri per valori preimpostati, altrimenti inserire 4 parametri:\nporta del server\nporta udp del server\nip del gruppo del multicast\nporta del gruppo del multicast\nintervallo per aggiornamento dei ranking e store in memoria permanente\nintervallo della sleep del selector");
+			if(args.length !=0 && args.length!=5)throw new Exception("non mettere parametri per valori preimpostati, altrimenti inserire 5 parametri:\nporta del server\nporta udp del server\nip del gruppo del multicast\nporta del gruppo del multicast\nintervallo per aggiornamento dei ranking e store in memoria permanente\n");
 
 			if(args.length!=0) {
 				PORT = Integer.parseInt(args[0]);
@@ -38,7 +37,6 @@ public class ServerMain {
 				IP_GROUP = args[2];
 				PORT_GROUP = Integer.parseInt(args[3]);
 				INTERVALLO_RANK_STORE = Integer.parseInt(args[4]);
-				INTERVALLO_SLEEP_SELECT = Integer.parseInt(args[5]); //da rimuovere
 			}
 			DatagramSocket socket = new DatagramSocket(PORT_UDP);
 
