@@ -6,7 +6,7 @@ The system leverages a **Client-Server architecture** allowing users to search f
 
 ---
 
-## 🏗️ Architectural Overview & Design Choices
+## Architectural Overview & Design Choices
 
 The platform splits tasks across two main components communicating over mixed networking protocols (`TCP/IP` and `UDP Multicast`):
 
@@ -24,7 +24,7 @@ The platform splits tasks across two main components communicating over mixed ne
 
 ---
 
-## 🧮 Local Ranking Algorithm
+## Local Ranking Algorithm
 
 The sorting hierarchy of local hotels dynamically incorporates **Review Quality** (synthetic score out of 5 stars) and **Review Quantity** (total contribution thresholds). 
 
@@ -40,7 +40,7 @@ The score calculation employs custom step increments (**Valore Scaglione**) comb
 
 ---
 
-## ⚙️ Compilation and Execution Guide
+## Compilation and Execution Guide
 
 ### External Dependencies
 * **Google Gson** (`gson-2.8.2.jar`) for JSON parsing and object serialization.
